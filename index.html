@@ -25,23 +25,14 @@ limitations under the License.
   <meta name="theme-color" content="#FF6F00">
 
 
-
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="styles/app.css">
-
   </head>
-
   <body>
-
     <header class="header">
-
       <div class="header__title-wrapper">
         <h1 class="header__title">Hacker News</h1>
         <h2 class="header__subhead">Top Stories</h2>
       </div>
-
     </header>
-
     <main class="loading">
     </main>
 
@@ -49,7 +40,7 @@ limitations under the License.
       Powered by the <a href="https://github.com/HackerNews/API">Hacker News API</a>
     </footer>
 
-    <script src="third_party/handlebars-v3.0.0.js"></script>
+
     <script>
       if (typeof window.Intl !== 'undefined') {
         document.write('<script src="third_party/handlebars-intl.min.js"><\/script>');
@@ -84,13 +75,18 @@ limitations under the License.
       </section>
     </script>
 
+
     <script id="tmpl-story-details-comment" type="text/x-handlebars-template">
       <p class="story-details-comment__author">{{ by }}{{#if time }}, {{ formatRelative time }}{{/if }}</p>
       <div class="story-details-comment__text">{{{ text }}}</div>
     </script>
+  </body>
+</html>
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="styles/app.css">
+    <script src="third_party/handlebars-v3.0.0.js"></script>
     <script src="scripts/namespace.js"></script>
     <script src="scripts/data.js"></script>
     <script src="scripts/app.js"></script>
 
-  </body>
-</html>
+
