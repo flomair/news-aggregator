@@ -343,7 +343,6 @@ APP.Main = (function() {
     }
 
 
-
     function loadStoryBatch() {
         var newstories = [];
         if (storyLoadCount > 0)
