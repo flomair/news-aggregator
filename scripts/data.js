@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-var APP = APP || {};
 APP.Data = (function() {
 
   var HN_API_BASE = 'https://hacker-news.firebaseio.com';
