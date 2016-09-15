@@ -17,14 +17,145 @@ limitations under the License.
 -->
 <!doctype html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
     <meta name="theme-color" content="#FF6F00">
+    <style type="text/css">
+      @import url('//fonts.googleapis.com/css?family=Roboto:400,500,700');
+* {
+  box-sizing: border-box;
+}
 
-    <link rel="stylesheet" href="styles/app.css">
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto';
+  font-weight: 400;
+  color: #444;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: stretch;
+      -webkit-align-content: stretch;
+          align-content: stretch;
+  background: #ececec;
+}
+
+a {
+  color: #E65100;
+}
+
+.header {
+  width: 100%;
+  height: 156px;
+  background: #FF8F00;
+  color: #FFF;
+  font-size: 40px;
+  font-weight: 400;
+  padding: 0 0 0 72px;
+  z-index: 1;
+  position: fixed;
+}
+
+.header__title-wrapper {
+  position: absolute;
+  bottom: 16px;
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+}
+
+.header__title {
+  font-size: 40px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+.header__subhead {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  opacity: 0.54;
+}
+
+body.details-active .story__title,
+body.details-active .story__by,
+body.details-active .story__score {
+  transition: opacity 0.5s ease-out;
+  opacity: 0 !important;
+}
+
+body.details-active .story {
+  background: linear-gradient(to bottom, #FFF 0%, #FFF 100%);
+}
+
+body.raised .header {
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16),
+      0px 2px 5px 0px rgba(0, 0, 0, 0.23);
+}
+
+main {
+  padding-top: 156px;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
+}
+
+main.loading {
+  background: url(../images/loader.png) center center no-repeat;
+  background-size: 24px 24px;
+
+  -webkit-animation-name: spin;
+          animation-name: spin;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+    </style>
+
+
+
 </head>
 
 <body>
@@ -44,7 +175,7 @@ limitations under the License.
     </footer>
 </body>
 </html>
-
+<link rel="stylesheet" href="styles/app.css">
 <script>
 if (typeof window.Intl !== 'undefined') {
     document.write('<script src="third_party/handlebars-intl.min.js"><\/script>');
