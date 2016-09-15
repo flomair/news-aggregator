@@ -23,13 +23,9 @@ limitations under the License.
     <meta name="viewport" content="width=device-width">
     <meta name="theme-color" content="#FF6F00">
     <style type="text/css">
-    @import "//fonts.googleapis.com/css?family=Roboto:400,500,700";*{box-sizing:border-box}html,body{padding:0;margin:0;height:100%;width:100%;font-family:'Roboto';font-weight:400;color:#444}html{overflow:hidden}body{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;-ms-flex-line-pack:stretch;-webkit-align-content:stretch;align-content:stretch;background:#ececec}a{color:#E65100}.header{width:100%;height:156px;background:#FF8F00;color:#FFF;font-size:40px;font-weight:400;padding:0 0 0 72px;z-index:1;position:fixed}.header__title-wrapper{position:absolute;bottom:16px;-webkit-transform-origin:0 100%;transform-origin:0 100%}.header__title{font-size:40px;font-weight:400;padding:0;margin:0}.header__subhead{font-size:20px;font-weight:400;padding:0;margin:0;opacity:.54}main{padding-top:156px;-webkit-flex:1;-ms-flex:1;flex:1;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;z-index:0}main.loading{background:url(../images/loader.png) center center no-repeat;background-size:24px 24px;-webkit-animation-name:spin;animation-name:spin;-webkit-animation-duration:500ms;animation-duration:500ms;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-timing-function:linear;animation-timing-function:linear}@-webkit-keyframes spin{from{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes spin{from{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
+    *{box-sizing:border-box}html,body{padding:0;margin:0;height:100%;width:100%;font-family:'Roboto';font-weight:400;color:#444}html{overflow:hidden}body{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;-ms-flex-line-pack:stretch;-webkit-align-content:stretch;align-content:stretch;background:#ececec}a{color:#E65100}.header{width:100%;height:156px;background:#FF8F00;color:#FFF;font-size:40px;font-weight:400;padding:0 0 0 72px;z-index:1;position:fixed}.header__title-wrapper{position:absolute;bottom:16px;-webkit-transform-origin:0 100%;transform-origin:0 100%}.header__title{font-size:40px;font-weight:400;padding:0;margin:0}.header__subhead{font-size:20px;font-weight:400;padding:0;margin:0;opacity:.54}main{padding-top:156px;-webkit-flex:1;-ms-flex:1;flex:1;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;z-index:0}main.loading{background:url(../images/loader.png) center center no-repeat;background-size:24px 24px;-webkit-animation-name:spin;animation-name:spin;-webkit-animation-duration:500ms;animation-duration:500ms;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-timing-function:linear;animation-timing-function:linear}@-webkit-keyframes spin{from{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes spin{from{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
     </style>
-
-
-
 </head>
-
 <body>
     <header class="header">
         <div class="header__title-wrapper">
@@ -47,7 +43,16 @@ limitations under the License.
     </footer>
 </body>
 </html>
+
 <link rel="stylesheet" href="styles/app.css">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Roboto']
+    }
+  });
+</script>
 <script id="tmpl-story" type="text/x-handlebars-template">
     <h1 class="story__title">{{ title }}</h1>
     <div class="story__score">{{ score }}</div>
