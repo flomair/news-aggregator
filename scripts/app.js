@@ -342,6 +342,8 @@ APP.Main = (function() {
         requestAnimationFrame(intern)
     }
 
+
+
     function loadStoryBatch() {
         var newstories = [];
         if (storyLoadCount > 0)
